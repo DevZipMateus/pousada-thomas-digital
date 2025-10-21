@@ -47,7 +47,7 @@ const Ambiente = () => {
     {
       title: "Lago",
       description: "Com pedalinho para um passeio tranquilo e pier para contemplação, nosso lago é perfeito para momentos de paz e relaxamento em família.",
-      images: [lago1p, lago2p, lago3p],
+      images: [lago3p, lago2p, lago1p],
       reverse: true,
     },
     {

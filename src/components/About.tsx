@@ -1,9 +1,11 @@
 import { Target, Eye, Heart } from "lucide-react";
+import SectionDivider from "./SectionDivider";
 
 const About = () => {
   return (
-    <section id="sobre" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4">
+    <section id="sobre" className="bg-secondary/30">
+      <SectionDivider position="top" />
+      <div className="container mx-auto px-4 pb-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Sobre a Pousada
@@ -63,6 +65,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <SectionDivider position="bottom" />
     </section>
   );
 };

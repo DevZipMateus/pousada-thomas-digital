@@ -1,53 +1,52 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { useState } from "react";
-import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Ambiente = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
   const ambientes = [
     {
-      category: "Piscina",
-      images: [
-        "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800",
-        "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=800",
-      ],
+      title: "Restaurante",
+      description: "No restaurante é servido o café da manhã, preparado com muito carinho e ingredientes frescos, proporcionando um momento especial para começar o dia.",
+      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+      reverse: false,
     },
     {
-      category: "Lago",
-      images: [
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-        "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=800",
-      ],
+      title: "Arquitetura",
+      description: "A Pousada Thomas foi toda construída pensando na arquitetura Italiana e Alemã, com detalhes que remetem à cultura europeia e ao aconchego das montanhas.",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+      reverse: true,
     },
     {
-      category: "Lounge",
-      images: [
-        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
-        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800",
-      ],
+      title: "Natureza",
+      description: "O verde é a cor principal de nosso cenário. Cercados pela Mata Atlântica, oferecemos contato direto com a natureza em um ambiente preservado e tranquilo.",
+      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800",
+      reverse: false,
     },
     {
-      category: "Restaurante",
-      images: [
-        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
-        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800",
-      ],
+      title: "Lago",
+      description: "Com pedalinho para um passeio tranquilo e pier para contemplação, nosso lago é perfeito para momentos de paz e relaxamento em família.",
+      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      reverse: true,
     },
     {
-      category: "Natureza",
-      images: [
-        "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800",
-        "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
-      ],
+      title: "Lounge",
+      description: "Um charme à parte que compõe nosso ambiente externo. Espaço ideal para confraternizações, leitura ou simplesmente apreciar a vista das montanhas.",
+      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+      reverse: false,
     },
     {
-      category: "Arquitetura",
-      images: [
-        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
-        "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=800",
-      ],
+      title: "Auditório",
+      description: "E quando for preciso realizar reuniões empresariais, retiros ou eventos, nosso auditório comporta confortavelmente até 100 pessoas, com toda infraestrutura necessária.",
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
+      reverse: true,
+    },
+    {
+      title: "Piscina",
+      description: "Nossa piscina, com água sempre cristalina e ambiente agradável, é perfeita para relaxar e se refrescar nos dias ensolarados das montanhas capixabas.",
+      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800",
+      reverse: false,
     },
   ];
 
@@ -66,56 +65,55 @@ const Ambiente = () => {
               </p>
             </div>
 
-            <div className="space-y-12 max-w-7xl mx-auto">
+            <div className="mb-12 max-w-3xl mx-auto text-center">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Na Pousada Thomas o amor é o 'ingrediente' principal. Localizada no município de Alfredo Chaves, 
+                a 76km de Vitória, oferecemos um refúgio perfeito para quem busca descanso e contato com a natureza.
+              </p>
+            </div>
+
+            <div className="space-y-16 max-w-6xl mx-auto">
               {ambientes.map((ambiente, idx) => (
-                <div key={idx}>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-6 text-center">
-                    {ambiente.category}
-                  </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {ambiente.images.map((image, imgIdx) => (
-                      <div
-                        key={imgIdx}
-                        className="rounded-lg overflow-hidden shadow-soft hover-lift cursor-pointer transition-all duration-300"
-                        onClick={() => setSelectedImage(image)}
-                      >
-                        <img
-                          src={image}
-                          alt={`${ambiente.category} ${imgIdx + 1}`}
-                          className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
+                <div
+                  key={idx}
+                  className={`flex flex-col ${
+                    ambiente.reverse ? "md:flex-row-reverse" : "md:flex-row"
+                  } gap-8 items-center`}
+                >
+                  <div className="w-full md:w-1/2">
+                    <img
+                      src={ambiente.image}
+                      alt={ambiente.title}
+                      className="rounded-lg shadow-soft hover-lift w-full h-80 object-cover"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                      {ambiente.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed text-lg">
+                      {ambiente.description}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
+
+            <div className="mt-16 text-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-elevated"
+              >
+                <Link to="/suites">
+                  VEJA TAMBÉM NOSSAS SUÍTES!
+                  <ChevronRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           </div>
         </section>
       </main>
-
-      {/* Lightbox */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          <button
-            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
-            onClick={() => setSelectedImage(null)}
-            aria-label="Fechar"
-          >
-            <X size={32} />
-          </button>
-          <img
-            src={selectedImage}
-            alt="Visualização ampliada"
-            className="max-w-full max-h-full object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-
       <Footer />
     </div>
   );

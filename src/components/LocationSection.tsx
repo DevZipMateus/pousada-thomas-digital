@@ -1,10 +1,10 @@
 import { MapPin } from "lucide-react";
-import SectionDivider from "./SectionDivider";
+import SectionDivider2 from "./SectionDivider2";
 
 const LocationSection = () => {
   return (
     <section id="localizacao" className="bg-secondary/30">
-      <SectionDivider position="top" />
+      <SectionDivider2 position="top" />
       <div className="container mx-auto px-4 pb-20">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -33,7 +33,7 @@ const LocationSection = () => {
           </div>
         </div>
       </div>
-      <SectionDivider position="bottom" />
+      <SectionDivider2 position="bottom" />
     </section>
   );
 };

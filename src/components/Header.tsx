@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,10 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
     const element = document.getElementById(sectionId);
     if (element) {
       const offsetTop = element.offsetTop - 80;
@@ -41,30 +47,36 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("inicio")}
+            <Link
+              to="/"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Início
-            </button>
-            <button
-              onClick={() => scrollToSection("sobre")}
+              Home
+            </Link>
+            <Link
+              to="/suites"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Sobre
-            </button>
-            <button
-              onClick={() => scrollToSection("diferenciais")}
+              Suítes
+            </Link>
+            <Link
+              to="/ambiente"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Diferenciais
-            </button>
-            <button
-              onClick={() => scrollToSection("contato")}
+              Ambiente
+            </Link>
+            <Link
+              to="/eventos"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
-              Contato
-            </button>
+              Eventos
+            </Link>
+            <Link
+              to="/reservas"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              Reservas & Contato
+            </Link>
             <Button
               asChild
               variant="default"
@@ -89,30 +101,41 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <nav className="md:hidden pb-4 flex flex-col gap-4">
-            <button
-              onClick={() => scrollToSection("inicio")}
+            <Link
+              to="/"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
             >
-              Início
-            </button>
-            <button
-              onClick={() => scrollToSection("sobre")}
+              Home
+            </Link>
+            <Link
+              to="/suites"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
             >
-              Sobre
-            </button>
-            <button
-              onClick={() => scrollToSection("diferenciais")}
+              Suítes
+            </Link>
+            <Link
+              to="/ambiente"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
             >
-              Diferenciais
-            </button>
-            <button
-              onClick={() => scrollToSection("contato")}
+              Ambiente
+            </Link>
+            <Link
+              to="/eventos"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
             >
-              Contato
-            </button>
+              Eventos
+            </Link>
+            <Link
+              to="/reservas"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
+            >
+              Reservas & Contato
+            </Link>
             <Button
               asChild
               variant="default"

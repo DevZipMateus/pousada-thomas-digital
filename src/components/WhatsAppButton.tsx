@@ -6,10 +6,11 @@ const WhatsAppButton = () => {
       href="https://wa.me/5527997248313"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 bg-primary rounded-full flex items-center justify-center text-primary-foreground shadow-elevated hover:shadow-lg transition-shadow duration-300"
-      aria-label="Contato pelo WhatsApp"
+      className="fixed top-24 right-6 z-40 bg-primary hover:bg-primary/90 rounded-full px-6 py-3 flex items-center gap-2 text-primary-foreground shadow-elevated hover:shadow-lg transition-all duration-300 font-medium"
+      aria-label="Atendimento WhatsApp"
     >
-      <MessageCircle className="h-7 w-7" />
+      <MessageCircle className="h-5 w-5" />
+      <span className="hidden sm:inline">ATENDIMENTO WHATSAPP</span>
     </a>
   );
 };

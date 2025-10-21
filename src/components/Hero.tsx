@@ -1,67 +1,88 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone } from "lucide-react";
-import heroImage from "@/assets/hero-mountains.jpg";
+import { ChevronDown } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Hero = () => {
-  return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center pt-20">
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" />
-      </div>
+  const heroImages = [
+    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920",
+    "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1920",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
+    "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1920",
+  ];
 
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
-            Pousada L A Thomas
-          </h1>
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-white/95 mb-8 animate-fade-in font-normal">
-            Oferecer aos nossos hóspedes uma experiência acolhedora e inesquecível, unindo conforto, hospitalidade e contato com a natureza
-          </h2>
-          <p className="text-lg md:text-xl text-white/90 mb-12 animate-fade-in italic">
-            Seu lar nas montanhas!
+  const scrollToAbout = () => {
+    const element = document.getElementById("sobre");
+    if (element) {
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center">
+      <Carousel
+        className="absolute inset-0"
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+      >
+        <CarouselContent>
+          {heroImages.map((image, index) => (
+            <CarouselItem key={index}>
+              <div
+                className="h-screen bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
+
+      <div className="relative z-10 container mx-auto px-4 text-center pt-20">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-8">
+            <div className="inline-block">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2 tracking-wide">
+                POUSADA THOMAS
+              </h1>
+              <div className="h-1 bg-accent mx-auto w-3/4"></div>
+            </div>
+          </div>
+
+          <p className="text-xl md:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl mx-auto">
+            Na Pousada Thomas o amor é o 'ingrediente' principal
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in">
-            <Button
-              asChild
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated"
-            >
-              <a href="https://wa.me/5527997248313" target="_blank" rel="noopener noreferrer">
-                <Phone className="mr-2 h-5 w-5" />
-                Fale conosco
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="bg-white/10 text-white border-white/60 hover:bg-white hover:text-foreground backdrop-blur-sm"
-            >
-              <a href="#sobre">
-                <MapPin className="mr-2 h-5 w-5" />
-                Conheça nossa pousada
-              </a>
-            </Button>
-          </div>
+          <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            Localizada no município de Alfredo Chaves, a 76km de Vitória, em um cenário
+            privilegiado cercado pela natureza e as montanhas do Espírito Santo
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-white border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">Conforto</h3>
-              <p className="text-white/90">Acomodações acolhedoras</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-white border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">Natureza</h3>
-              <p className="text-white/90">Vista para as montanhas</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-white border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">Tranquilidade</h3>
-              <p className="text-white/90">Ambiente familiar</p>
-            </div>
-          </div>
+          <Button
+            onClick={scrollToAbout}
+            size="lg"
+            className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-elevated text-lg px-8"
+          >
+            SAIBA MAIS
+            <ChevronDown className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </div>
     </section>

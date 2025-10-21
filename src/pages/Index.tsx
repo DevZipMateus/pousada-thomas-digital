@@ -1,8 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Features from "@/components/Features";
-import Contact from "@/components/Contact";
+import AmbienteSection from "@/components/AmbienteSection";
+import LocationSection from "@/components/LocationSection";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
@@ -12,10 +13,11 @@ const Index = () => {
       <main>
         <Hero />
         <About />
-        <Features />
-        <Contact />
+        <AmbienteSection />
+        <LocationSection />
       </main>
       <WhatsAppButton />
+      <Footer />
     </div>
   );
 };

@@ -8,14 +8,12 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import banner1 from "@/assets/banner1.jpg";
+import banner2 from "@/assets/banner2.jpg";
+import banner3 from "@/assets/banner3.jpg";
 
 const Hero = () => {
-  const heroImages = [
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920",
-    "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=1920",
-    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920",
-    "https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=1920",
-  ];
+  const heroImages = [banner1, banner2, banner3];
 
   const scrollToAbout = () => {
     const element = document.getElementById("sobre");

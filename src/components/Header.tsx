@@ -17,6 +17,10 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
       window.location.href = `/#${sectionId}`;
@@ -39,9 +43,9 @@ const Header = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src="/logo.png" alt="Pousada L A Thomas" className="h-16 w-auto" />
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">

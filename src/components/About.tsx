@@ -1,15 +1,11 @@
 import { Target, Eye, Heart } from "lucide-react";
 import SectionDivider from "./SectionDivider";
-
 const About = () => {
-  return (
-    <section id="sobre" className="bg-secondary/30">
+  return <section id="sobre" className="bg-secondary/30">
       <SectionDivider position="top" />
       <div className="container mx-auto px-4 pb-20">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Sobre a Pousada
-          </h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A Pousada L A Thomas surgiu a partir de um sonho da família em ter um espaço para descanso nos finais de semana e feriados. 
             Hoje, atuamos no setor de turismo e hospitalidade, oferecendo hospedagem de qualidade voltada a hóspedes que buscam conforto, 
@@ -66,8 +62,6 @@ const About = () => {
         </div>
       </div>
       <SectionDivider position="bottom" />
-    </section>
-  );
+    </section>;
 };
-
 export default About;

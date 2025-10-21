@@ -66,7 +66,7 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 text-center pt-20">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-black/50 backdrop-blur-sm rounded-lg p-8 md:p-12">
+          <div className="bg-black/30 backdrop-blur-sm rounded-lg p-8 md:p-12">
             <div className="mb-8">
               <div className="inline-block">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2 tracking-wide">

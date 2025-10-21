@@ -11,9 +11,16 @@ import Autoplay from "embla-carousel-autoplay";
 import banner1 from "@/assets/banner1.jpg";
 import banner2 from "@/assets/banner2.jpg";
 import banner3 from "@/assets/banner3.jpg";
+import banner1Small from "@/assets/banner1-small.jpg";
+import banner2Small from "@/assets/banner2-small.jpg";
+import banner3Small from "@/assets/banner3-small.jpg";
 
 const Hero = () => {
-  const heroImages = [banner1, banner2, banner3];
+  const heroImages = [
+    { small: banner1Small, large: banner1 },
+    { small: banner2Small, large: banner2 },
+    { small: banner3Small, large: banner3 },
+  ];
 
   const scrollToAbout = () => {
     const element = document.getElementById("sobre");
@@ -42,10 +49,16 @@ const Hero = () => {
         <CarouselContent>
           {heroImages.map((image, index) => (
             <CarouselItem key={index}>
-              <div
-                className="h-screen bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${image})` }}
-              />
+              <div className="h-screen bg-cover bg-center bg-no-repeat relative">
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
+                  style={{ backgroundImage: `url(${image.small})` }}
+                />
+                <div
+                  className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
+                  style={{ backgroundImage: `url(${image.large})` }}
+                />
+              </div>
             </CarouselItem>
           ))}
         </CarouselContent>

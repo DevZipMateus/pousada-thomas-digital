@@ -50,9 +50,10 @@ const Hero = () => {
           {heroImages.map((image, index) => (
             <CarouselItem key={index}>
               <div 
-                className="h-screen bg-cover bg-center bg-no-repeat"
+                className="h-screen bg-cover bg-no-repeat bg-center md:bg-center"
                 style={{ 
-                  backgroundImage: `url(${window.innerWidth >= 1024 ? image.large : image.small})` 
+                  backgroundImage: `url(${window.innerWidth >= 1024 ? image.large : image.small})`,
+                  backgroundPosition: window.innerWidth < 768 ? 'center 30%' : 'center center'
                 }}
               />
             </CarouselItem>

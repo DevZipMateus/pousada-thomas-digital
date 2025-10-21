@@ -112,6 +112,7 @@ All colors MUST be HSL.
     background-image: url('/textura-background.png');
     background-repeat: repeat;
     background-size: auto;
+    background-attachment: fixed;
   }
   
   h1, h2, h3, h4, h5, h6 {

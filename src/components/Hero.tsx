@@ -60,26 +60,17 @@ const Hero = () => {
         </CarouselContent>
       </Carousel>
 
-      <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-black/20 backdrop-blur-sm rounded-lg p-8 md:p-12">
-            <div className="mb-8">
-              <div className="inline-block">
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-2 tracking-wide">
-                  POUSADA THOMAS
-                </h1>
-                <div className="h-1 bg-accent mx-auto w-3/4"></div>
-              </div>
-            </div>
-
-            <p className="text-xl md:text-2xl text-white/95 mb-8 leading-relaxed max-w-3xl mx-auto">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-20 flex items-end min-h-screen pb-16">
+        <div className="max-w-4xl mx-auto w-full">
+          <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 md:p-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Na Pousada Thomas o amor é o 'ingrediente' principal
-            </p>
+            </h2>
 
-            <p className="text-lg md:text-xl text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <h3 className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
               Localizada no município de Alfredo Chaves, a 76km de Vitória, em um cenário
               privilegiado cercado pela natureza e as montanhas do Espírito Santo
-            </p>
+            </h3>
 
             <Button
               onClick={scrollToAbout}

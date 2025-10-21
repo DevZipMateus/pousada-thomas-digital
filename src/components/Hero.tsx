@@ -45,9 +45,7 @@ const Hero = () => {
               <div
                 className="h-screen bg-cover bg-center bg-no-repeat"
                 style={{ backgroundImage: `url(${image})` }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60" />
-              </div>
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

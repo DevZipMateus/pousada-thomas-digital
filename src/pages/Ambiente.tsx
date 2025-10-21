@@ -3,6 +3,16 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import arqu1p from "@/assets/ambiente/arqu1p.png";
+import arqu2p from "@/assets/ambiente/arqu2p.png";
+import arqu3p from "@/assets/ambiente/arqu3p.png";
+import lago1p from "@/assets/ambiente/lago1p.png";
+import lago2p from "@/assets/ambiente/lago2p.png";
+import lago3p from "@/assets/ambiente/lago3p.png";
+import loun1p from "@/assets/ambiente/loun1p.png";
+import loun2p from "@/assets/ambiente/loun2p.png";
+import audi1p from "@/assets/ambiente/audi1p.png";
+import audi2p from "@/assets/ambiente/audi2p.png";
 
 const Ambiente = () => {
   const ambientes = [
@@ -15,7 +25,7 @@ const Ambiente = () => {
     {
       title: "Arquitetura",
       description: "A Pousada Thomas foi toda construída pensando na arquitetura Italiana e Alemã, com detalhes que remetem à cultura europeia e ao aconchego das montanhas.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+      images: [arqu1p, arqu2p, arqu3p],
       reverse: true,
     },
     {
@@ -27,19 +37,19 @@ const Ambiente = () => {
     {
       title: "Lago",
       description: "Com pedalinho para um passeio tranquilo e pier para contemplação, nosso lago é perfeito para momentos de paz e relaxamento em família.",
-      image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
+      images: [lago1p, lago2p, lago3p],
       reverse: true,
     },
     {
       title: "Lounge",
       description: "Um charme à parte que compõe nosso ambiente externo. Espaço ideal para confraternizações, leitura ou simplesmente apreciar a vista das montanhas.",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
+      images: [loun1p, loun2p],
       reverse: false,
     },
     {
       title: "Auditório",
       description: "E quando for preciso realizar reuniões empresariais, retiros ou eventos, nosso auditório comporta confortavelmente até 100 pessoas, com toda infraestrutura necessária.",
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
+      images: [audi1p, audi2p],
       reverse: true,
     },
     {
@@ -81,11 +91,26 @@ const Ambiente = () => {
                   } gap-8 items-center`}
                 >
                   <div className="w-full md:w-1/2">
-                    <img
-                      src={ambiente.image}
-                      alt={ambiente.title}
-                      className="rounded-lg shadow-soft hover-lift w-full h-80 object-cover"
-                    />
+                    {ambiente.images ? (
+                      <div className="grid grid-cols-2 gap-4">
+                        {ambiente.images.map((img, imgIdx) => (
+                          <img
+                            key={imgIdx}
+                            src={img}
+                            alt={`${ambiente.title} ${imgIdx + 1}`}
+                            className={`rounded-lg shadow-soft hover-lift w-full object-cover ${
+                              imgIdx === 0 && ambiente.images!.length === 3 ? 'col-span-2 h-64' : 'h-48'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    ) : (
+                      <img
+                        src={ambiente.image}
+                        alt={ambiente.title}
+                        className="rounded-lg shadow-soft hover-lift w-full h-80 object-cover"
+                      />
+                    )}
                   </div>
                   <div className="w-full md:w-1/2">
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

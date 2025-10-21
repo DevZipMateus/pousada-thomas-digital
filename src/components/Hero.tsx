@@ -49,16 +49,12 @@ const Hero = () => {
         <CarouselContent>
           {heroImages.map((image, index) => (
             <CarouselItem key={index}>
-              <div className="h-screen bg-cover bg-center bg-no-repeat relative">
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat lg:hidden"
-                  style={{ backgroundImage: `url(${image.small})` }}
-                />
-                <div
-                  className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden lg:block"
-                  style={{ backgroundImage: `url(${image.large})` }}
-                />
-              </div>
+              <div 
+                className="h-screen bg-cover bg-center bg-no-repeat"
+                style={{ 
+                  backgroundImage: `url(${window.innerWidth >= 1024 ? image.large : image.small})` 
+                }}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

@@ -63,6 +63,7 @@ const Hero = () => {
 
       <div className="relative z-10 container mx-auto px-4 text-center pt-20 flex items-end min-h-screen pb-16">
         <div className="max-w-4xl mx-auto w-full">
+          <h1 className="sr-only">Pousada Thomas</h1>
           <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 md:p-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Na Pousada Thomas o amor é o 'ingrediente' principal

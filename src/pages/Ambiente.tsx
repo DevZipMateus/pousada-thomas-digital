@@ -11,15 +11,25 @@ import lago2p from "@/assets/ambiente/lago2p.png";
 import lago3p from "@/assets/ambiente/lago3p.png";
 import loun1p from "@/assets/ambiente/loun1p.png";
 import loun2p from "@/assets/ambiente/loun2p.png";
+import loun3p from "@/assets/ambiente/loun3p.png";
 import audi1p from "@/assets/ambiente/audi1p.png";
 import audi2p from "@/assets/ambiente/audi2p.png";
+import rest1p from "@/assets/ambiente/rest1p.png";
+import rest2p from "@/assets/ambiente/rest2p.png";
+import rest3p from "@/assets/ambiente/rest3p.png";
+import pisc1p from "@/assets/ambiente/pisc1p.png";
+import pisc2p from "@/assets/ambiente/pisc2p.png";
+import pisc3p from "@/assets/ambiente/pisc3p.png";
+import natu1p from "@/assets/ambiente/natu1p.png";
+import natu2p from "@/assets/ambiente/natu2p.png";
+import natu3p from "@/assets/ambiente/natu3p.png";
 
 const Ambiente = () => {
   const ambientes = [
     {
       title: "Restaurante",
       description: "No restaurante é servido o café da manhã, preparado com muito carinho e ingredientes frescos, proporcionando um momento especial para começar o dia.",
-      image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+      images: [rest1p, rest2p, rest3p],
       reverse: false,
     },
     {
@@ -31,7 +41,7 @@ const Ambiente = () => {
     {
       title: "Natureza",
       description: "O verde é a cor principal de nosso cenário. Cercados pela Mata Atlântica, oferecemos contato direto com a natureza em um ambiente preservado e tranquilo.",
-      image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800",
+      images: [natu1p, natu2p, natu3p],
       reverse: false,
     },
     {
@@ -43,7 +53,7 @@ const Ambiente = () => {
     {
       title: "Lounge",
       description: "Um charme à parte que compõe nosso ambiente externo. Espaço ideal para confraternizações, leitura ou simplesmente apreciar a vista das montanhas.",
-      images: [loun1p, loun2p],
+      images: [loun1p, loun2p, loun3p],
       reverse: false,
     },
     {
@@ -55,7 +65,7 @@ const Ambiente = () => {
     {
       title: "Piscina",
       description: "Nossa piscina, com água sempre cristalina e ambiente agradável, é perfeita para relaxar e se refrescar nos dias ensolarados das montanhas capixabas.",
-      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800",
+      images: [pisc1p, pisc2p, pisc3p],
       reverse: false,
     },
   ];
@@ -91,26 +101,18 @@ const Ambiente = () => {
                   } gap-8 items-center`}
                 >
                   <div className="w-full md:w-1/2">
-                    {ambiente.images ? (
-                      <div className="grid grid-cols-2 gap-4">
-                        {ambiente.images.map((img, imgIdx) => (
-                          <img
-                            key={imgIdx}
-                            src={img}
-                            alt={`${ambiente.title} ${imgIdx + 1}`}
-                            className={`rounded-lg shadow-soft hover-lift w-full object-cover ${
-                              imgIdx === 0 && ambiente.images!.length === 3 ? 'col-span-2 h-64' : 'h-48'
-                            }`}
-                          />
-                        ))}
-                      </div>
-                    ) : (
-                      <img
-                        src={ambiente.image}
-                        alt={ambiente.title}
-                        className="rounded-lg shadow-soft hover-lift w-full h-80 object-cover"
-                      />
-                    )}
+                    <div className="grid grid-cols-2 gap-4">
+                      {ambiente.images.map((img, imgIdx) => (
+                        <img
+                          key={imgIdx}
+                          src={img}
+                          alt={`${ambiente.title} ${imgIdx + 1}`}
+                          className={`rounded-lg shadow-soft hover-lift w-full object-cover ${
+                            imgIdx === 0 && ambiente.images.length === 3 ? 'col-span-2 h-64' : 'h-48'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                   <div className="w-full md:w-1/2">
                     <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

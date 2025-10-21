@@ -29,7 +29,7 @@ const Ambiente = () => {
     {
       title: "Restaurante",
       description: "No restaurante é servido o café da manhã, preparado com muito carinho e ingredientes frescos, proporcionando um momento especial para começar o dia.",
-      images: [rest1p, rest2p, rest3p],
+      images: [rest3p, rest2p, rest1p],
       reverse: false,
     },
     {

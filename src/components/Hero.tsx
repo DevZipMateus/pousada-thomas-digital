@@ -70,7 +70,7 @@ const Hero = () => {
             </h2>
 
             <h3 className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-              Localizada no município de Alfredo Chaves, a 76km de Vitória, em um cenário
+              Localizada no município de Alfredo Chaves, em um cenário
               privilegiado cercado pela natureza e as montanhas do Espírito Santo
             </h3>
 

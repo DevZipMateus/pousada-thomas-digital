@@ -57,7 +57,7 @@ const AmbienteSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Na Pousada Thomas o amor é o 'ingrediente' principal. Localizada no município de Alfredo Chaves, 
-            a 76km de Vitória, oferecemos um refúgio perfeito para quem busca descanso e contato com a natureza.
+            oferecemos um refúgio perfeito para quem busca descanso e contato com a natureza.
           </p>
         </div>
 

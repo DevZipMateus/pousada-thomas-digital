@@ -7,7 +7,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A Pousada L A Thomas surgiu a partir de um sonho da família em ter um espaço para descanso nos finais de semana e feriados. 
+            A Pousada Thomas surgiu a partir de um sonho da família em ter um espaço para descanso nos finais de semana e feriados.
             Hoje, atuamos no setor de turismo e hospitalidade, oferecendo hospedagem de qualidade voltada a hóspedes que buscam conforto, 
             tranquilidade e contato com a natureza.
           </p>
@@ -17,7 +17,7 @@ const About = () => {
           <p className="text-muted-foreground leading-relaxed text-center text-lg">
             Nosso público-alvo é composto por turistas nacionais, casais e famílias que desejam viver experiências autênticas, 
             com atendimento personalizado e ambiente acolhedor. Também recebemos igrejas para retiros, empresas, eventos, 
-            casamentos e encontros terapêuticos. Inserida em um mercado competitivo, a Pousada L A Thomas diferencia-se 
+            casamentos e encontros terapêuticos. Inserida em um mercado competitivo, a Pousada Thomas diferencia-se 
             pela atenção aos detalhes, excelência no atendimento e valorização da cultura local, fortalecendo o turismo 
             sustentável e de qualidade na região.
           </p>

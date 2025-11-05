@@ -65,10 +65,6 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto w-full">
           <h1 className="sr-only">Pousada Thomas</h1>
           <div className="bg-black/20 backdrop-blur-sm rounded-lg p-6 md:p-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Na Pousada Thomas o amor é o 'ingrediente' principal
-            </h2>
-
             <h3 className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
               Localizada no município de Alfredo Chaves, em um cenário
               privilegiado cercado pela natureza e as montanhas do Espírito Santo

@@ -42,7 +42,7 @@ const AmbienteSection = () => {
     },
     {
       title: "Piscina",
-      description: "Nossa piscina, com água sempre cristalina e ambiente agradável, é perfeita para relaxar e se refrescar nos dias ensolarados das montanhas capixabas.",
+      description: "Nossa piscina, com água sempre cristalina, pois é uma água 100% mineral, não há produtos químicos. Convidativa para um banho num dia de sol.",
       image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?w=800",
       reverse: false,
     },

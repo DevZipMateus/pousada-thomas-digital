@@ -6,19 +6,19 @@ const AmbienteSection = () => {
   const ambientes = [
     {
       title: "Restaurante",
-      description: "No restaurante é servido o café da manhã, preparado com muito carinho e ingredientes frescos, proporcionando um momento especial para começar o dia.",
+      description: "No restaurante é servido o café da manhã, que é totalmente preparado na Pousada pelas mãos das nossas cozinheiras. O almoço é servido em nosso fogão a lenha, com um cardápio variado e saboroso, típico de roça. O jantar é à la carte.",
       image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
       reverse: false,
     },
     {
       title: "Arquitetura",
-      description: "A Pousada Thomas foi toda construída pensando na arquitetura Italiana e Alemã, com detalhes que remetem à cultura europeia e ao aconchego das montanhas.",
+      description: "A Pousada Thomas foi toda construída pensando na arquitetura Italiana e Alemã, remetendo a memória dos antepassados da família e nossa origem. Os traços e detalhes são trabalhados de forma rústica, dando todo charme e aconchego para que todos se sintam a vontade e em casa.",
       image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
       reverse: true,
     },
     {
       title: "Natureza",
-      description: "O verde é a cor principal de nosso cenário. Cercados pela Mata Atlântica, oferecemos contato direto com a natureza em um ambiente preservado e tranquilo.",
+      description: "O verde é a cor principal de nosso cenário, e fazemos questão de preservar a natureza ao redor e embelezar todo nosso ambiente com várias espécies de flores, árvores e arbustos. Um convite irrecusável para respirar o ar fresco das montanhas com cheirinho de natureza!",
       image: "https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800",
       reverse: false,
     },
@@ -30,13 +30,13 @@ const AmbienteSection = () => {
     },
     {
       title: "Lounge",
-      description: "Um charme à parte que compõe nosso ambiente externo. Espaço ideal para confraternizações, leitura ou simplesmente apreciar a vista das montanhas.",
+      description: "Um charme a parte que compõe nosso ambiente externo, ideal para relaxar lendo um livro ou tomar um café em família ou entre amigos, com toda natureza fazendo parte dessa experiência.",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800",
       reverse: false,
     },
     {
       title: "Auditório",
-      description: "E quando for preciso realizar reuniões empresariais, retiros ou eventos, nosso auditório comporta confortavelmente até 100 pessoas, com toda infraestrutura necessária.",
+      description: "E quando for preciso realizar reuniões empresariais, encontros de retiro, palestras ou outros tipos de encontros que dependem de local fechado com acomodação para todos, vocês podem contar com nossa estrutura de auditório que tem capacidade para até 100 pessoas.",
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
       reverse: true,
     },

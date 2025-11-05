@@ -44,8 +44,11 @@ const Eventos = () => {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
                 Eventos
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
                 A Pousada Thomas é o local perfeito para realizar eventos inesquecíveis em meio à natureza
+              </p>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Nos jardins, na área da piscina, em nossos salões ou aonde preferirem, seu evento se transformará em um momento único e inesquecível. Consulte-nos e faça o seu orçamento.
               </p>
             </div>
 

@@ -24,7 +24,7 @@ const AmbienteSection = () => {
     },
     {
       title: "Lago",
-      description: "Com pedalinho para um passeio tranquilo e pier para contemplação, nosso lago é perfeito para momentos de paz e relaxamento em família.",
+      description: "Com pedalinho para um passeio tranquilo e pier para observação da natureza, nosso lago possui também peixes e patos que passeiam por toda sua extensão. Uma dica do passeio é passar por debaixo da ponte!",
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800",
       reverse: true,
     },

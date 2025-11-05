@@ -6,20 +6,17 @@ const About = () => {
       <div className="container mx-auto px-4 pb-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A Pousada Thomas surgiu a partir de um sonho da família em ter um espaço para descanso nos finais de semana e feriados.
-            Hoje, atuamos no setor de turismo e hospitalidade, oferecendo hospedagem de qualidade voltada a hóspedes que buscam conforto, 
-            tranquilidade e contato com a natureza.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+            Na Pousada Thomas o amor é o "ingrediente" principal em tudo que fazemos. Nossa missão é proporcionar aos hóspedes os melhores sentimentos, tornando sua hospedagem agradável nesse paraíso.
+          </p>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
+            Buscamos deixar os hospedes como se estivessem em seu lar, por isso o nosso slogan "Seu lar nas montanhas!"
           </p>
         </div>
 
         <div className="bg-card rounded-lg p-8 shadow-soft border border-border mb-16 max-w-4xl mx-auto">
           <p className="text-muted-foreground leading-relaxed text-center text-lg">
-            Nosso público-alvo é composto por turistas nacionais, casais e famílias que desejam viver experiências autênticas, 
-            com atendimento personalizado e ambiente acolhedor. Também recebemos igrejas para retiros, empresas, eventos, 
-            casamentos e encontros terapêuticos. Inserida em um mercado competitivo, a Pousada Thomas diferencia-se 
-            pela atenção aos detalhes, excelência no atendimento e valorização da cultura local, fortalecendo o turismo 
-            sustentável e de qualidade na região.
+            A Pousada Thomas está situada em um cenário de beleza natural em meio a Mata Atlântica, na divisa do Município de Marechal Floriano (a 8 km do centro) e Alfredo Chaves, e a 50 km de Vitória, de fácil acesso e estrada asfaltada.
           </p>
         </div>
 

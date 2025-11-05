@@ -25,14 +25,6 @@ const Eventos = () => {
     },
   ];
 
-  const eventGallery = [
-    "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800",
-    "https://images.unsplash.com/photo-1478146896981-b80fe463b330?w=800",
-    "https://images.unsplash.com/photo-1470229538611-16ba8c7d6dfd?w=800",
-    "https://images.unsplash.com/photo-1505236858219-8359eb29e329?w=800",
-    "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?w=800",
-    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800",
-  ];
 
   return (
     <div className="min-h-screen">
@@ -79,26 +71,6 @@ const Eventos = () => {
                   </div>
                 );
               })}
-            </div>
-
-            <div className="mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground text-center mb-8">
-                Galeria de Eventos
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                {eventGallery.map((image, idx) => (
-                  <div
-                    key={idx}
-                    className="rounded-lg overflow-hidden shadow-soft hover-lift"
-                  >
-                    <img
-                      src={image}
-                      alt={`Evento ${idx + 1}`}
-                      className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
 
             <div className="bg-primary/10 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto border border-primary/20">

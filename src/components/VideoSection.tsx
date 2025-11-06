@@ -10,6 +10,8 @@ const VideoSection = () => {
             <video
               className="w-full h-auto"
               controls
+              loop
+              muted
               preload="metadata"
               poster="/video/pousadathomas.mp4#t=0.1"
             >

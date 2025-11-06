@@ -36,11 +36,16 @@ const Hero = () => {
       delay: 5000
     })]}>
         <CarouselContent>
-          {heroImages.map((image, index) => <CarouselItem key={index}>
-              <div className="h-screen bg-cover bg-no-repeat bg-center md:bg-center" style={{
-            backgroundImage: `url(${window.innerWidth >= 1024 ? image.large : image.small})`,
-            backgroundPosition: window.innerWidth < 768 ? 'center 30%' : 'center center'
-          }} />
+           {heroImages.map((image, index) => <CarouselItem key={index}>
+              <div 
+                className="h-screen bg-no-repeat bg-center"
+                style={{
+                  backgroundImage: `url(${window.innerWidth >= 1024 ? image.large : image.small})`,
+                  backgroundSize: window.innerWidth < 768 ? 'contain' : 'cover',
+                  backgroundPosition: 'center center',
+                  backgroundColor: 'hsl(var(--background))'
+                }} 
+              />
             </CarouselItem>)}
         </CarouselContent>
       </Carousel>

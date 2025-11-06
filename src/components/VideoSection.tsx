@@ -9,11 +9,11 @@ const VideoSection = () => {
           <div className="rounded-lg overflow-hidden shadow-elevated border border-border">
             <video
               className="w-full h-auto"
-              controls
+              autoPlay
               loop
               muted
-              preload="metadata"
-              poster="/video/pousadathomas.mp4#t=0.1"
+              playsInline
+              preload="auto"
             >
               <source src="/video/pousadathomas.mp4" type="video/mp4" />
               Seu navegador não suporta a reprodução de vídeos.

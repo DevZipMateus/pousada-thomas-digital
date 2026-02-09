@@ -3,9 +3,9 @@ import SectionDivider from "./SectionDivider";
 const About = () => {
   return <section id="sobre" className="bg-secondary/30">
       <SectionDivider position="top" />
-      <div className="container mx-auto px-4 pb-20">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
+      <div className="container mx-auto px-4 pb-10 sm:pb-16 md:pb-20">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
             Na Pousada Thomas o amor é o "ingrediente" principal em tudo que fazemos. Nossa missão é proporcionar aos hóspedes os melhores sentimentos, tornando sua hospedagem agradável nesse paraíso.
           </p>
@@ -14,13 +14,13 @@ const About = () => {
           </p>
         </div>
 
-        <div className="bg-card rounded-lg p-8 shadow-soft border border-border mb-16 max-w-4xl mx-auto">
+        <div className="bg-card rounded-lg p-5 sm:p-6 md:p-8 shadow-soft border border-border mb-10 md:mb-16 max-w-4xl mx-auto">
           <p className="text-muted-foreground leading-relaxed text-center text-lg">
             A Pousada Thomas está situada em um cenário de beleza natural em meio a Mata Atlântica, na divisa do Município de Marechal Floriano (a 8 km do centro) e Alfredo Chaves, e a 50 km de Vitória, de fácil acesso e estrada asfaltada.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           <div className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
               <Target className="h-8 w-8 text-primary" />

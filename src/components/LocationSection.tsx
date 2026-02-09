@@ -12,7 +12,7 @@ const LocationSection = () => {
           </h2>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <MapPin className="h-5 w-5" />
-            <p className="text-lg">
+            <p className="text-sm sm:text-base md:text-lg">
               Rod. João Ribeiro Schorling, ES-376, Km 70 - Aparecida, Alfredo Chaves - ES, 29240-000
             </p>
           </div>
@@ -23,7 +23,8 @@ const LocationSection = () => {
             <iframe
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Pousada+Thomas,+Rod.+João+Ribeiro+Schorling,+ES-376,+Km+70+-+Aparecida,+Alfredo+Chaves+-+ES,+29240-000"
               width="100%"
-              height="450"
+              height="350"
+              className="w-full min-h-[250px] sm:min-h-[350px] md:min-h-[450px]"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

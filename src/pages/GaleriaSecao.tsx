@@ -39,7 +39,7 @@ const GaleriaSecao = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <div className="mb-8">
               <Link
@@ -49,12 +49,12 @@ const GaleriaSecao = () => {
                 <ChevronLeft size={20} />
                 <span>Voltar à galeria</span>
               </Link>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
                 {section.title}
               </h1>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
               {section.images.map((image, index) => (
                 <div
                   key={index}

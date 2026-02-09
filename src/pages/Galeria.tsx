@@ -12,9 +12,10 @@ const Galeria = () => {
         <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <ScrollReveal className="text-center mb-8 md:mb-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2">
                 Galeria de Fotos
               </h1>
+              <div className="divider-line mb-4" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Conheça cada detalhe da Pousada Thomas através das nossas fotos.
               </p>
@@ -25,16 +26,16 @@ const Galeria = () => {
                 <ScrollReveal key={section.id} delay={idx * 0.08}>
                   <Link
                     to={`/galeria/${section.id}`}
-                    className="group relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg block"
+                    className="group relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg block hover-card-pop"
                   >
                     <img
                       src={section.images[0]}
                       alt={section.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent group-hover:from-black/80 transition-all duration-500" />
+                    <div className="absolute bottom-0 left-0 right-0 p-5 transition-transform duration-300 group-hover:translate-y-[-4px]">
                       <h2 className="text-xl md:text-2xl font-bold text-white">
                         {section.title}
                       </h2>

@@ -8,7 +8,8 @@ const About = () => {
       <SectionDivider position="top" />
       <div className="container mx-auto px-4 pb-10 sm:pb-16 md:pb-20">
         <ScrollReveal className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-2">Pousada Thomas</h2>
+          <div className="divider-line mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
             Na Pousada Thomas o amor é o "ingrediente" principal em tudo que fazemos. Nossa missão é proporcionar aos hóspedes os melhores sentimentos, tornando sua hospedagem agradável nesse paraíso.
           </p>
@@ -17,15 +18,15 @@ const About = () => {
           </p>
         </ScrollReveal>
 
-        <ScrollReveal className="bg-card rounded-lg p-5 sm:p-6 md:p-8 shadow-soft border border-border mb-10 md:mb-16 max-w-4xl mx-auto" delay={0.1}>
+        <ScrollReveal className="bg-card rounded-lg p-5 sm:p-6 md:p-8 shadow-soft border border-border mb-10 md:mb-16 max-w-4xl mx-auto hover-glow" delay={0.1}>
           <p className="text-muted-foreground leading-relaxed text-center text-lg">
             A Pousada Thomas está situada em um cenário de beleza natural em meio a Mata Atlântica, na divisa do Município de Marechal Floriano (a 8 km do centro) e Alfredo Chaves, e a 50 km de Vitória, de fácil acesso e estrada asfaltada.
           </p>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0}>
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-card-pop border border-border" delay={0}>
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto transition-transform duration-500 hover:rotate-12 hover:scale-110">
               <Target className="h-8 w-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 text-foreground">Missão</h3>
@@ -35,8 +36,8 @@ const About = () => {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0.15}>
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-card-pop border border-border" delay={0.15}>
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto transition-transform duration-500 hover:rotate-12 hover:scale-110">
               <Eye className="h-8 w-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 text-foreground">Visão</h3>
@@ -46,8 +47,8 @@ const About = () => {
             </p>
           </ScrollReveal>
 
-          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0.3}>
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-card-pop border border-border" delay={0.3}>
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto transition-transform duration-500 hover:rotate-12 hover:scale-110">
               <Heart className="h-8 w-8 text-primary" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-4 text-foreground">Valores</h3>

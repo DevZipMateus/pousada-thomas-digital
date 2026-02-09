@@ -33,9 +33,10 @@ const Eventos = () => {
         <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
             <ScrollReveal className="text-center mb-8 md:mb-12">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-2">
                 Eventos
               </h1>
+              <div className="divider-line mb-4" />
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
                 A Pousada Thomas é o local perfeito para realizar eventos inesquecíveis em meio à natureza
               </p>
@@ -49,16 +50,18 @@ const Eventos = () => {
                 const Icon = evento.icon;
                 return (
                   <ScrollReveal key={idx} delay={idx * 0.15}>
-                    <div className="bg-card rounded-lg overflow-hidden shadow-soft hover-lift border border-border h-full">
-                      <img
-                        src={evento.image}
-                        alt={evento.title}
-                        className="w-full h-40 sm:h-48 object-cover"
-                        loading="lazy"
-                        decoding="async"
-                      />
+                    <div className="bg-card rounded-lg overflow-hidden shadow-soft hover-card-pop border border-border h-full group">
+                      <div className="overflow-hidden">
+                        <img
+                          src={evento.image}
+                          alt={evento.title}
+                          className="w-full h-40 sm:h-48 object-cover transition-transform duration-700 group-hover:scale-110"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      </div>
                       <div className="p-6">
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110">
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
                         <h3 className="text-xl font-semibold text-foreground mb-3">
@@ -75,7 +78,7 @@ const Eventos = () => {
             </div>
 
             <ScrollReveal>
-              <div className="bg-primary/10 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto border border-primary/20">
+              <div className="bg-primary/10 rounded-lg p-8 md:p-12 text-center max-w-4xl mx-auto border border-primary/20 hover-glow">
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                   Planeje seu evento conosco
                 </h3>
@@ -85,7 +88,7 @@ const Eventos = () => {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated hover:shadow-[0_12px_40px_hsl(162_73%_46%/0.3)] transition-all duration-300"
                 >
                   <a href="https://wa.me/5527997248313" target="_blank" rel="noopener noreferrer">
                     <Phone className="mr-2 h-5 w-5" />

@@ -1,16 +1,20 @@
 import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
-  return <footer className="bg-secondary/30 border-t border-border">
+
+  return (
+    <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col items-center text-center space-y-8">
+        <ScrollReveal className="flex flex-col items-center text-center space-y-8">
           <img src="/logo.png" alt="Pousada Thomas" className="h-20 w-auto" />
 
           <nav className="flex flex-wrap justify-center gap-6">
@@ -31,7 +35,7 @@ const Footer = () => {
             </Link>
           </nav>
 
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated">
+          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-elevated hover:shadow-[0_12px_40px_hsl(162_73%_46%/0.3)] transition-all duration-300">
             <a href="https://wa.me/5527997248313" target="_blank" rel="noopener noreferrer">
               Atendimento WhatsApp
             </a>
@@ -57,10 +61,10 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-4">
-            <a href="https://instagram.com/pousadathomas" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Instagram">
+            <a href="https://instagram.com/pousadathomas" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300" aria-label="Instagram">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://facebook.com/pousadathomas" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-colors" aria-label="Facebook">
+            <a href="https://facebook.com/pousadathomas" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </a>
           </div>
@@ -68,8 +72,10 @@ const Footer = () => {
           <div className="text-sm text-muted-foreground pt-6 border-t border-border w-full">
             <p>2025 ©Pousada Thomas - Todos os direitos reservados</p>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

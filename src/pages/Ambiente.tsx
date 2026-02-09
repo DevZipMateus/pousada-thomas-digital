@@ -1,9 +1,9 @@
-import { lazy, Suspense } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 import arqu1p from "@/assets/ambiente/arqu1p.png";
 import arqu2p from "@/assets/ambiente/arqu2p.png";
 import arqu3p from "@/assets/ambiente/arqu3p.png";
@@ -77,59 +77,60 @@ const Ambiente = () => {
       <main className="pt-20">
         <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-8 md:mb-12">
+            <ScrollReveal className="text-center mb-8 md:mb-12">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
                 Ambiente
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 A Pousada possui diversos ambientes para se desfrutar. Conheça cada cantinho especial que preparamos para você!
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="mb-8 md:mb-12 max-w-3xl mx-auto text-center">
+            <ScrollReveal className="mb-8 md:mb-12 max-w-3xl mx-auto text-center" delay={0.1}>
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Na Pousada Thomas o amor é o 'ingrediente' principal. Localizada no município de Alfredo Chaves, 
                 oferecemos um refúgio perfeito para quem busca descanso e contato com a natureza.
               </p>
-            </div>
+            </ScrollReveal>
 
             <div className="space-y-10 sm:space-y-12 md:space-y-16 max-w-6xl mx-auto">
               {ambientes.map((ambiente, idx) => (
-                <div
-                  key={idx}
-                  className={`flex flex-col ${
-                    ambiente.reverse ? "md:flex-row-reverse" : "md:flex-row"
-                  } gap-6 md:gap-8 items-center`}
-                >
-                  <div className="w-full md:w-1/2">
-                    <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                      {ambiente.images.map((img, imgIdx) => (
-                        <img
-                          key={imgIdx}
-                          src={img}
-                          alt={`${ambiente.title} ${imgIdx + 1}`}
-                          className={`rounded-lg shadow-soft hover-lift w-full object-cover ${
-                            imgIdx === 0 && ambiente.images.length === 3 ? 'col-span-2 h-40 sm:h-52 md:h-64' : 'h-32 sm:h-40 md:h-48'
-                          }`}
-                          loading="lazy"
-                          decoding="async"
-                        />
-                      ))}
+                <ScrollReveal key={idx}>
+                  <div
+                    className={`flex flex-col ${
+                      ambiente.reverse ? "md:flex-row-reverse" : "md:flex-row"
+                    } gap-6 md:gap-8 items-center`}
+                  >
+                    <div className="w-full md:w-1/2">
+                      <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                        {ambiente.images.map((img, imgIdx) => (
+                          <img
+                            key={imgIdx}
+                            src={img}
+                            alt={`${ambiente.title} ${imgIdx + 1}`}
+                            className={`rounded-lg shadow-soft hover-lift w-full object-cover ${
+                              imgIdx === 0 && ambiente.images.length === 3 ? 'col-span-2 h-40 sm:h-52 md:h-64' : 'h-32 sm:h-40 md:h-48'
+                            }`}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                    <div className="w-full md:w-1/2">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">
+                        {ambiente.title}
+                      </h3>
+                      <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
+                        {ambiente.description}
+                      </p>
                     </div>
                   </div>
-                  <div className="w-full md:w-1/2">
-                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 md:mb-4">
-                      {ambiente.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-base sm:text-lg">
-                      {ambiente.description}
-                    </p>
-                  </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
 
-            <div className="mt-10 md:mt-16 text-center">
+            <ScrollReveal className="mt-10 md:mt-16 text-center">
               <Button
                 asChild
                 size="lg"
@@ -140,7 +141,7 @@ const Ambiente = () => {
                   <ChevronRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-            </div>
+            </ScrollReveal>
           </div>
         </section>
       </main>

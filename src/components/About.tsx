@@ -1,10 +1,13 @@
 import { Target, Eye, Heart } from "lucide-react";
 import SectionDivider from "./SectionDivider";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
+
 const About = () => {
-  return <section id="sobre" className="bg-secondary/30">
+  return (
+    <section id="sobre" className="bg-secondary/30">
       <SectionDivider position="top" />
       <div className="container mx-auto px-4 pb-10 sm:pb-16 md:pb-20">
-        <div className="text-center mb-10 md:mb-16">
+        <ScrollReveal className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Pousada Thomas</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
             Na Pousada Thomas o amor é o "ingrediente" principal em tudo que fazemos. Nossa missão é proporcionar aos hóspedes os melhores sentimentos, tornando sua hospedagem agradável nesse paraíso.
@@ -12,16 +15,16 @@ const About = () => {
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-6">
             Buscamos deixar os hospedes como se estivessem em seu lar, por isso o nosso slogan "Seu lar nas montanhas!"
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="bg-card rounded-lg p-5 sm:p-6 md:p-8 shadow-soft border border-border mb-10 md:mb-16 max-w-4xl mx-auto">
+        <ScrollReveal className="bg-card rounded-lg p-5 sm:p-6 md:p-8 shadow-soft border border-border mb-10 md:mb-16 max-w-4xl mx-auto" delay={0.1}>
           <p className="text-muted-foreground leading-relaxed text-center text-lg">
             A Pousada Thomas está situada em um cenário de beleza natural em meio a Mata Atlântica, na divisa do Município de Marechal Floriano (a 8 km do centro) e Alfredo Chaves, e a 50 km de Vitória, de fácil acesso e estrada asfaltada.
           </p>
-        </div>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
-          <div className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0}>
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
               <Target className="h-8 w-8 text-primary" />
             </div>
@@ -30,9 +33,9 @@ const About = () => {
               Oferecer aos nossos hóspedes uma experiência acolhedora e inesquecível, unindo conforto, hospitalidade e 
               contato com a natureza, para que cada estadia seja um momento de descanso, alegria e boas lembranças.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0.15}>
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
               <Eye className="h-8 w-8 text-primary" />
             </div>
@@ -41,9 +44,9 @@ const About = () => {
               Ser reconhecida como uma das melhores pousadas da região, referência em qualidade, hospitalidade e 
               atendimento personalizado, inspirando nossos hóspedes a retornarem e recomendarem nossa pousada.
             </p>
-          </div>
+          </ScrollReveal>
 
-          <div className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border">
+          <ScrollReveal className="bg-card rounded-lg p-8 shadow-soft hover-lift border border-border" delay={0.3}>
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
               <Heart className="h-8 w-8 text-primary" />
             </div>
@@ -55,10 +58,12 @@ const About = () => {
               <li className="leading-relaxed"><strong>Integridade:</strong> Agir com honestidade, ética e transparência em todas as relações</li>
               <li className="leading-relaxed"><strong>Bem-estar:</strong> Promover um ambiente tranquilo, seguro e acolhedor</li>
             </ul>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
       <SectionDivider position="bottom" />
-    </section>;
+    </section>
+  );
 };
+
 export default About;

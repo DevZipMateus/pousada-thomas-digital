@@ -1,12 +1,13 @@
 import { MapPin } from "lucide-react";
 import SectionDivider2 from "./SectionDivider2";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 const LocationSection = () => {
   return (
     <section id="localizacao" className="bg-secondary/30">
       <SectionDivider2 position="top" />
       <div className="container mx-auto px-4 pb-20">
-        <div className="text-center mb-12">
+        <ScrollReveal className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             LOCALIZAÇÃO
           </h2>
@@ -16,9 +17,9 @@ const LocationSection = () => {
               Rod. João Ribeiro Schorling, ES-376, Km 70 - Aparecida, Alfredo Chaves - ES, 29240-000
             </p>
           </div>
-        </div>
+        </ScrollReveal>
 
-        <div className="max-w-5xl mx-auto">
+        <ScrollReveal className="max-w-5xl mx-auto" delay={0.1}>
           <div className="rounded-lg overflow-hidden shadow-elevated border border-border">
             <iframe
               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Pousada+Thomas,+Rod.+João+Ribeiro+Schorling,+ES-376,+Km+70+-+Aparecida,+Alfredo+Chaves+-+ES,+29240-000"
@@ -32,7 +33,7 @@ const LocationSection = () => {
               title="Localização da Pousada Thomas"
             />
           </div>
-        </div>
+        </ScrollReveal>
       </div>
       <SectionDivider2 position="bottom" />
     </section>

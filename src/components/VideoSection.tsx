@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import SectionDivider from "./SectionDivider";
+import { ScrollReveal } from "@/hooks/useScrollAnimation";
 
 const VideoSection = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -24,24 +25,26 @@ const VideoSection = () => {
     <section className="bg-background">
       <SectionDivider position="top" />
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
-        <div className="max-w-5xl mx-auto" ref={containerRef}>
-          <div className="rounded-lg overflow-hidden shadow-elevated border border-border">
-            <video
-              ref={videoRef}
-              className="w-full h-auto"
-              loop
-              muted
-              playsInline
-              preload="none"
-              poster=""
-            >
-              {isVisible && (
-                <source src="/video/pousadathomas.mp4" type="video/mp4" />
-              )}
-              Seu navegador não suporta a reprodução de vídeos.
-            </video>
+        <ScrollReveal className="max-w-5xl mx-auto" delay={0}>
+          <div ref={containerRef}>
+            <div className="rounded-lg overflow-hidden shadow-elevated border border-border">
+              <video
+                ref={videoRef}
+                className="w-full h-auto"
+                loop
+                muted
+                playsInline
+                preload="none"
+                poster=""
+              >
+                {isVisible && (
+                  <source src="/video/pousadathomas.mp4" type="video/mp4" />
+                )}
+                Seu navegador não suporta a reprodução de vídeos.
+              </video>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </div>
       <SectionDivider position="bottom" />
     </section>

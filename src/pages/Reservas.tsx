@@ -8,10 +8,10 @@ const Reservas = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
                 Reservas & Contato
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">

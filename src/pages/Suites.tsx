@@ -45,10 +45,10 @@ const Suites = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
                 Nossas Suítes
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -56,7 +56,7 @@ const Suites = () => {
               </p>
             </div>
 
-            <div className="space-y-16 max-w-6xl mx-auto">
+            <div className="space-y-10 sm:space-y-12 md:space-y-16 max-w-6xl mx-auto">
               {suites.map((suite) => (
                 <SuiteCarousel key={suite.id} suite={suite} />
               ))}

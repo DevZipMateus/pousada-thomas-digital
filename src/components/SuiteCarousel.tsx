@@ -31,7 +31,9 @@ const SuiteCarousel = ({ suite }: SuiteCarouselProps) => {
                 <img
                   src={image}
                   alt={`${suite.name} - Imagem ${index + 1}`}
-                  className="w-full h-80 md:h-96 object-cover"
+                  className="w-full h-56 sm:h-72 md:h-80 lg:h-96 object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </CarouselItem>
             ))}
@@ -40,7 +42,7 @@ const SuiteCarousel = ({ suite }: SuiteCarouselProps) => {
           <CarouselNext className="right-4" />
         </Carousel>
 
-        <div className="p-8 flex flex-col justify-center">
+        <div className="p-5 sm:p-6 md:p-8 flex flex-col justify-center">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
             {suite.name}
           </h3>

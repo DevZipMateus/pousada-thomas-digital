@@ -30,10 +30,10 @@ const Eventos = () => {
     <div className="min-h-screen">
       <Header />
       <main className="pt-20">
-        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-b from-secondary/30 to-background">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 md:mb-12">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
                 Eventos
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
@@ -44,7 +44,7 @@ const Eventos = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-16 max-w-6xl mx-auto">
               {eventos.map((evento, idx) => {
                 const Icon = evento.icon;
                 return (
@@ -55,7 +55,9 @@ const Eventos = () => {
                     <img
                       src={evento.image}
                       alt={evento.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-40 sm:h-48 object-cover"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="p-6">
                       <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">

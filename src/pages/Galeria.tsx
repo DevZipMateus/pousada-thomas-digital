@@ -20,13 +20,12 @@ const Galeria = () => {
             </div>
 
             <div className="max-w-7xl mx-auto">
-              {gallerySections.map((section, idx) => (
+              {gallerySections.map((section) => (
                 <GalleryCarousel
                   key={section.id}
                   id={section.id}
                   title={section.title}
                   images={section.images}
-                  direction={idx % 2 === 0 ? "forward" : "backward"}
                 />
               ))}
             </div>

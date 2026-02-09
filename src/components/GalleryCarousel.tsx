@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -8,10 +8,9 @@ interface GalleryCarouselProps {
   id: string;
   title: string;
   images: string[];
-  direction: "forward" | "backward";
 }
 
-const GalleryCarousel = ({ id, title, images, direction }: GalleryCarouselProps) => {
+const GalleryCarousel = ({ id, title, images }: GalleryCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -20,19 +19,6 @@ const GalleryCarousel = ({ id, title, images, direction }: GalleryCarouselProps)
 
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-
-  // Auto-scroll with direction
-  useEffect(() => {
-    if (!emblaApi) return;
-    const interval = setInterval(() => {
-      if (direction === "forward") {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollPrev();
-      }
-    }, 4500);
-    return () => clearInterval(interval);
-  }, [emblaApi, direction]);
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);

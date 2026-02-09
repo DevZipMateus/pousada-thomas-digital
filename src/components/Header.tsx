@@ -68,6 +68,12 @@ const Header = () => {
               Ambiente
             </Link>
             <Link
+              to="/galeria"
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+            >
+              Galeria
+            </Link>
+            <Link
               to="/eventos"
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
             >
@@ -123,6 +129,13 @@ const Header = () => {
               className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
             >
               Ambiente
+            </Link>
+            <Link
+              to="/galeria"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-left"
+            >
+              Galeria
             </Link>
             <Link
               to="/eventos"

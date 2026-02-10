@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center gap-2">
               <Mail className="h-4 w-4" />
-              <a href="mailto:contato@pousadathomas.com.br" className="hover:text-primary transition-colors">
+              <a href="https://wa.me/5527997248313" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 contato@pousadathomas.com.br
               </a>
             </div>

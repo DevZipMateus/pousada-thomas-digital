@@ -32,19 +32,19 @@ const Hero = () => {
         className="absolute inset-0 will-change-transform"
       >
         <Carousel
-          className="absolute inset-0"
-          opts={{ loop: true }}
+          className="absolute inset-0 overflow-hidden"
+          opts={{ loop: true, align: "start" }}
           plugins={[Autoplay({ delay: 5000 })]}
         >
-          <CarouselContent>
+          <CarouselContent className="-ml-0">
             {heroImages.map((image, index) => (
-              <CarouselItem key={index}>
+              <CarouselItem key={index} className="pl-0 min-w-0 basis-full">
                 <picture>
                   <source media="(min-width: 768px)" srcSet={image.large} />
                   <img
                     src={image.small}
                     alt={`Pousada Thomas - Vista ${index + 1}`}
-                    className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[calc(100vh-5rem)] object-cover scale-110"
+                    className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[calc(100vh-5rem)] object-cover"
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
                   />

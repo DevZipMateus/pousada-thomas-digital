@@ -33,7 +33,6 @@ const VideoSection = () => {
   // Play video when visible or when index changes
   useEffect(() => {
     if (isVisible && videoRef.current) {
-      videoRef.current.load();
       videoRef.current.play().catch(() => {});
     }
   }, [isVisible, currentIndex]);
@@ -62,7 +61,7 @@ const VideoSection = () => {
                 className="w-full h-full max-h-[70vh] object-contain"
                 muted
                 playsInline
-                preload="none"
+                preload="auto"
                 onEnded={handleVideoEnd}
                 key={currentIndex}
               >

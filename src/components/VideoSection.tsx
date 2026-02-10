@@ -61,7 +61,7 @@ const VideoSection = () => {
                 className="w-full h-full max-h-[70vh] object-contain"
                 muted
                 playsInline
-                preload="auto"
+                preload="metadata"
                 onEnded={handleVideoEnd}
                 key={currentIndex}
               >

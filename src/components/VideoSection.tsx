@@ -55,11 +55,11 @@ const VideoSection = () => {
       <SectionDivider position="top" />
       <div className="container mx-auto px-4 py-8 sm:py-12 md:py-16">
         <ScrollReveal className="max-w-5xl mx-auto" delay={0}>
-          <div ref={containerRef} className="relative group">
-            <div className="rounded-lg overflow-hidden shadow-elevated border border-border">
+          <div ref={containerRef} className="relative group flex justify-center">
+            <div className="rounded-lg overflow-hidden shadow-elevated border border-border max-h-[70vh] w-auto">
               <video
                 ref={videoRef}
-                className="w-full h-auto"
+                className="w-full h-full max-h-[70vh] object-contain"
                 muted
                 playsInline
                 preload="none"
